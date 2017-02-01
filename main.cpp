@@ -13,5 +13,72 @@ private:
     bool isNewLargest(int); // This is a private class function
 
 public:
+    SimpleStat();          // Default constructor
+    bool addNumber(int);
+    double calcAverage();
 
+    int getLargest()
+    {
+        return largest;
+    }
+
+    int getCount()
+    {
+        return count;
+    }
 };
+
+// SimpleStat Class Implementation Code
+
+/****************************************
+*    SimpleStat Default Constructor     *
+****************************************/
+
+SimpleStat::SimpleStat()
+{
+    largest - sum - count = 0;
+}
+
+/****************************************
+*     SimpleStat::addNumber             *
+****************************************/
+
+bool SimpleStat::addNumber(int numb)
+{
+    bool goodNum = true;
+    if (num >= 0)               // If num is valid
+    {
+        sum += num;             // Add it to the sum
+        count++;                // Count it
+        if(isNewLargest(num))   // Find out if it is
+        {
+            largest = num;      // the new largest
+        }
+        else
+        {
+            goodNum - false;
+        }
+
+        return goodNum;
+    }
+}
+
+/****************************************
+*     SimpleStat::isNewLargest          *
+****************************************/
+
+bool SimpleStat::isNewLargest(int num)
+{
+    if (num > largest)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+/****************************************
+*     SimpleStat::calcAverage           *
+****************************************/
