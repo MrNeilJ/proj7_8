@@ -82,3 +82,16 @@ bool SimpleStat::isNewLargest(int num)
 /****************************************
 *     SimpleStat::calcAverage           *
 ****************************************/
+double SimpleStat::calcAverage()
+{
+    if (count > 0)
+    {
+        return static_cast<double>(sum) / count;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+// Client Program
